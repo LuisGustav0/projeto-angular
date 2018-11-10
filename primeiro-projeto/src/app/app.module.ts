@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { HelloWorldComponent } from './hello-world/hello-world.component';
 import { BemVindoComponent } from './bem-vindo/bem-vindo.component';
 import { JumbotronComponent } from './jumbotron/jumbotron.component';
-import { PessoaComponent } from './pessoa/pessoa.component';
+import { FuncionarioComponent } from './funcionario/funcionario.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +14,7 @@ import { PessoaComponent } from './pessoa/pessoa.component';
     HelloWorldComponent,
     BemVindoComponent,
     JumbotronComponent,
-    PessoaComponent
+    FuncionarioComponent
   ],
   imports: [
     BrowserModule,

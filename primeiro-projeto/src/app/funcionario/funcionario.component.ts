@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-pessoa',
-  templateUrl: './pessoa.component.html',
-  styleUrls: ['./pessoa.component.css']
+  selector: 'app-funcionario',
+  templateUrl: './funcionario.component.html',
+  styleUrls: ['./funcionario.component.css']
 })
-export class PessoaComponent {
-  nome = '';
+export class FuncionarioComponent {
   isExibirAlerta = false;
+  nome = '';
 
   onSalvar() {
     this.isExibirAlerta = true;
