@@ -9,6 +9,6 @@ export class PessoaComponent {
   nome = 'Luis Gustavo';
 
   salvar() {
-    console.log('Registro salvo: ', this.nome);
+    console.log(`Registro salvo:  ${this.nome}`);
   }
 }
