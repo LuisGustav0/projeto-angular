@@ -8,9 +8,11 @@ import { Component, OnInit } from '@angular/core';
 export class PessoaComponent {
   nome = '';
 
-  salvar(inputNome: any) {
-    console.log(`Registro salvo:  ${inputNome.value}`);
+  onAlterarNome(event: any) {
+    this.nome = event.target.value;
+  }
 
+  salvar(inputNome: any) {
     this.nome = inputNome.value;
   }
 }

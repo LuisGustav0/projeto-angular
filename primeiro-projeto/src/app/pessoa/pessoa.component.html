@@ -15,13 +15,16 @@
       #inputNome
       type="text" 
       class="form-control" 
+      (input)="onAlterarNome($event)" 
+      [value]="nome"
     >
   </div>
 
   <button 
       type="button" 
       class="btn btn-primary" 
-      (click)="salvar(inputNome)">
+      (click)="salvar(inputNome)"
+      [disabled]="nome.length === 0">
     Salvar
   </button>
 </div>
