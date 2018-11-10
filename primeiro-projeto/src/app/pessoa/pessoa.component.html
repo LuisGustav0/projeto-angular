@@ -1,5 +1,7 @@
 <div class="container">
-  <div class="alert alert-success" role="alert">
+  <div *ngIf="isExibirAlerta" 
+       class="alert alert-success" 
+       role="alert">
     Registro salvo com sucesso:
     <strong>
       {{ nome }}
@@ -21,8 +23,16 @@
   <button 
       type="button" 
       class="btn btn-primary" 
-      (click)="salvar()"
+      (click)="onSalvar()"
       [disabled]="nome.length === 0">
     Salvar
+  </button>
+ 
+  <button 
+      type="button" 
+      style="color: white"
+      class="btn btn-warning" 
+      (click)="onLimpar()">
+    Limpar
   </button>
 </div>

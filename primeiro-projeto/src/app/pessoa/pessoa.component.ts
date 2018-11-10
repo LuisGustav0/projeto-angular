@@ -7,8 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PessoaComponent {
   nome = '';
+  isExibirAlerta = false;
 
-  salvar() {
-    
+  onSalvar() {
+    this.isExibirAlerta = true;
+  }
+
+  onLimpar() {
+    this.nome = '';
+    this.isExibirAlerta = false;
   }
 }
