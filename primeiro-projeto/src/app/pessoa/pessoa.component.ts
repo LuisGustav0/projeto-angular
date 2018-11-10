@@ -10,5 +10,9 @@ export class PessoaComponent {
 
   salvar() {
     console.log(`Registro salvo:  ${this.nome}`);
+
+    const numero = Math.round(Math.random() * 100);
+
+    this.nome = 'Luis Gustavo ' + numero;
   }
 }
