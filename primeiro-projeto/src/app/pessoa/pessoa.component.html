@@ -12,17 +12,16 @@
     </label>
 
     <input 
+      #inputNome
       type="text" 
       class="form-control" 
-      (input)="onAlterarNome($event)"
-      value="{{ nome }}"
     >
   </div>
 
   <button 
       type="button" 
       class="btn btn-primary" 
-      (click)="salvar()">
+      (click)="salvar(inputNome)">
     Salvar
   </button>
 </div>
