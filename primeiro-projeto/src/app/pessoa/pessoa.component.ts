@@ -8,6 +8,10 @@ import { Component, OnInit } from '@angular/core';
 export class PessoaComponent {
   nome = 'Luis Gustavo';
 
+  onAlterarNome(event: any) {
+    console.log(event);
+  }
+
   salvar() {
     console.log(`Registro salvo:  ${this.nome}`);
 

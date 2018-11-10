@@ -11,7 +11,7 @@
       Nome
     </label>
 
-    <input type="text" class="form-control">
+    <input type="text" class="form-control" (input)="onAlterarNome($event)">
   </div>
 
   <button type="button" class="btn btn-primary" (click)="salvar()">
