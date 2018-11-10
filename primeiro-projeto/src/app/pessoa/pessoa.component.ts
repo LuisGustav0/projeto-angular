@@ -6,10 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./pessoa.component.css']
 })
 export class PessoaComponent {
-  nome = 'Luis Gustavo';
+  nome = '';
 
   onAlterarNome(event: any) {
-    console.log(event);
+    this.nome = event.target.value;
   }
 
   salvar() {
