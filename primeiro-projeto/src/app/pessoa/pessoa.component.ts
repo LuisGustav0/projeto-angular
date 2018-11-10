@@ -7,9 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PessoaComponent {
   nome = 'Luis Gustavo';
-  idade = 27;
 
-  getIdade() {
-    return 7;
+  salvar() {
+    console.log('Registro salvo: ', this.nome);
   }
 }
