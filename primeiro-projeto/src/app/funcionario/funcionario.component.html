@@ -37,47 +37,12 @@
     Limpar
   </button>
 </div> 
+
 <div class="row" 
-     style="margin-top: 15px;">
-  <div class="col-2">
-    <div class="card">
-      <img 
-        class="card-img-top" 
-        src="https://randomuser.me/api/portraits/men/1.jpg" 
-        alt="Joao">
-      <div class="card-body">
-        <h5 class="card-title">
-          Joao
-        </h5>
-      </div>
-    </div>
+     style="margin-top: 20px;">
+  <div 
+      class="col-2"
+      *ngFor="let funcionarioTO of listaFuncionario">
+        <app-funcionario-card [funcionario]="funcionarioTO"></app-funcionario-card>
   </div>
-
-  <div class="col-2">
-      <div class="card">
-        <img 
-          class="card-img-top" 
-          src="https://randomuser.me/api/portraits/men/2.jpg" 
-          alt="Joao">
-        <div class="card-body">
-          <h5 class="card-title">
-            Joao
-          </h5>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-2">
-        <div class="card">
-          <img 
-            class="card-img-top" 
-            src="https://randomuser.me/api/portraits/men/3.jpg" 
-            alt="Joao">
-          <div class="card-body">
-            <h5 class="card-title">
-              Joao
-            </h5>
-          </div>
-        </div>
-      </div>
 </div>
