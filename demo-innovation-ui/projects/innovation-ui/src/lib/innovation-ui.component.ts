@@ -3,9 +3,9 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'lib-innovation-ui',
   template: `
-    <p>
+    <h1>
       innovation-ui works!
-    </p>
+    </h1>
   `,
   styles: []
 })
