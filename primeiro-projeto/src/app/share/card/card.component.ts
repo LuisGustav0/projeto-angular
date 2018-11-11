@@ -8,4 +8,11 @@ import { Component, Input } from '@angular/core';
 export class CardComponent {
   @Input() valor: number;
   @Input() descricao: string;
+
+  getStyleCard() {
+    return {
+      'border-width.px': this.valor,
+      backgroundColor: this.valor % 2 === 0 ? '#E3F2FD' : '#F44336'
+    };
+  }
 }
