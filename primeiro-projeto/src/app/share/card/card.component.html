@@ -9,7 +9,14 @@
 
   <div class="card-body">
     <h5 class="card-title">
-      {{ descricao }}
+      <span 
+        class="badge"
+        [ngClass]="{
+          'badge-danger': isUserAdmin(),
+          'badge-primary': !isUserAdmin()
+        }">
+          {{ descricao }}
+      </span>      
     </h5>
   </div>
 </div>

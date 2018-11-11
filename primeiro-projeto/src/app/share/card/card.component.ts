@@ -9,10 +9,14 @@ export class CardComponent {
   @Input() valor: number;
   @Input() descricao: string;
 
+  isUserAdmin() {
+    return this.valor % 2 === 0;
+  }
+
   getStyleCard() {
     return {
       'border-width.px': this.valor,
-      backgroundColor: this.valor % 2 === 0 ? '#E3F2FD' : '#F44336'
+      backgroundColor: this.valor % 2 === 0 ? '#E1F5FE' : '#E0F2F1'
     };
   }
 }
