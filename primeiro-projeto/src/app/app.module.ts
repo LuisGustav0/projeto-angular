@@ -6,8 +6,10 @@ import { AppComponent } from './app.component';
 import { HelloWorldComponent } from './hello-world/hello-world.component';
 import { BemVindoComponent } from './bem-vindo/bem-vindo.component';
 import { JumbotronComponent } from './jumbotron/jumbotron.component';
+
 import { FuncionarioComponent } from './funcionario/funcionario.component';
-import { FuncionarioCardComponent } from './funcionario/funcionario-card/funcionario-card.component';
+import { CadastroFuncionarioComponent } from './funcionario/cadastro-funcionario/cadastro-funcionario.component';
+import { CardComponent } from './share/card/card.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,8 @@ import { FuncionarioCardComponent } from './funcionario/funcionario-card/funcion
     BemVindoComponent,
     JumbotronComponent,
     FuncionarioComponent,
-    FuncionarioCardComponent
+    CadastroFuncionarioComponent,
+    CardComponent
   ],
   imports: [
     BrowserModule,
