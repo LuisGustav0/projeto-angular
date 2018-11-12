@@ -6,4 +6,8 @@ import { Injectable } from '@angular/core';
 export class InnovationUiService {
 
   constructor() { }
+
+  getMessage() {
+    alert('sadad');
+  }
 }

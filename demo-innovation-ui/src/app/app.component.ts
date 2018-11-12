@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { InnovationUiService } from './../../projects/innovation-ui/src/lib/innovation-ui.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'demo-innovation-ui';
+
+  constructor( private innovationUiService: InnovationUiService) {
+    this.innovationUiService.getMessage();
+  }
 }
