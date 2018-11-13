@@ -134,7 +134,7 @@
       "root": "projects/innovation-ui",
       "sourceRoot": "projects/innovation-ui/src",
       "projectType": "library",
-      "prefix": "lib",
+      "prefix": "in",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-ng-packagr:build",
