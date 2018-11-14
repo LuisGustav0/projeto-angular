@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
 
@@ -11,6 +12,7 @@ import { InnovationUiModule } from './../../projects/innovation-ui/src/lib/modul
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     InnovationUiModule
   ],
   providers: [],
