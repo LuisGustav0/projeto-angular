@@ -1,11 +1,14 @@
 import { NgModule } from '@angular/core';
 
+import { MatButtonModule } from '@angular/material';
+
+import { FormCrudComponent } from './components/form-crud/form-crud.component';
 import { InputTextComponent } from './components/input-text/input-text.component';
 import { ButtonComponent } from './components/button/button.component';
-import { MatButtonModule } from '@angular/material';
 
 @NgModule({
   declarations: [
+    FormCrudComponent,
     InputTextComponent,
     ButtonComponent
   ],
@@ -13,6 +16,7 @@ import { MatButtonModule } from '@angular/material';
     MatButtonModule
   ],
   exports: [
+    FormCrudComponent,
     InputTextComponent,
     ButtonComponent
   ]
