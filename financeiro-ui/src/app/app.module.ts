@@ -6,7 +6,8 @@ import {
   MatSidenavModule,
   MatToolbarModule,
   MatButtonModule,
-  MatIconModule
+  MatIconModule,
+  MatListModule
 } from '@angular/material';
 
 import { AppComponent } from './app.component';
@@ -23,7 +24,8 @@ import { IndexComponent } from './index/index.component';
     MatSidenavModule,
     MatToolbarModule,
     MatButtonModule,
-    MatIconModule
+    MatIconModule,
+    MatListModule
   ],
   providers: [],
   bootstrap: [AppComponent]
