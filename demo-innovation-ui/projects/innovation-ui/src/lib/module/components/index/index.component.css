@@ -1,3 +1,9 @@
-mat-sidenav {
+.in-mat-sidenav-container {
+  height: 100%;
+}
+
+.in-mat-sidenav {
     width: 200px;
-  }
+    height: 100%;
+}
+

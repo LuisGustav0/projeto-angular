@@ -11,4 +11,5 @@ import {
 export class HeaderComponent {
   @Input() title: string;
   @Input() logo: any;
+  @Input() sidenav: any;
 }

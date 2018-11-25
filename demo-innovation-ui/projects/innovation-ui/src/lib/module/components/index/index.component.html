@@ -1,9 +1,24 @@
-<in-header
-  [title]="title"
-  [logo]="logo"
->
-</in-header>
+<mat-sidenav-container
+  class="in-mat-sidenav-container">
+  <mat-sidenav
+    #sidenav
+    class="in-mat-sidenav"
+    role="navigation">
+    <p>
+      Menu
+    </p>
+  </mat-sidenav>
 
-<mat-sidenav-container>
+  <mat-sidenav-content>
+    <in-header
+      [sidenav]="sidenav"
+      [logo]="logo"
+      title="title"
+    >
+    </in-header>
 
+    <content>
+    </content>
+  </mat-sidenav-content>
 </mat-sidenav-container>
+
