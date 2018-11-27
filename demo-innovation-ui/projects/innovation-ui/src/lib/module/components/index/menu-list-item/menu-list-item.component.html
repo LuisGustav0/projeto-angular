@@ -13,9 +13,12 @@
 
   {{menu.title}}
 
-  <span fxFlex *ngIf="menu.children && menu.children.length">
+  <span
+    *ngIf="menu.children && menu.children.length"
+    fxFlex
+  >
     <span fxFlex></span>
-    <mat-icon >
+    <mat-icon>
       expand_more
     </mat-icon>
   </span>

@@ -7,7 +7,7 @@ import {
 @Component({
   selector: 'in-index',
   templateUrl: './index.component.html',
-  styleUrls: ['./index.component.css']
+  styleUrls: ['./index.component.scss']
 })
 export class IndexComponent implements OnInit {
   @Input() title: string;
