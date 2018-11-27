@@ -13,7 +13,7 @@ import {
 export class MenuListItemComponent implements OnInit {
   expanded: boolean;
   @HostBinding('attr.aria-expanded') ariaExpanded = this.expanded;
-  @Input() item: any;
+  @Input() menu: any;
   @Input() depth: number;
 
   constructor() {
@@ -22,6 +22,6 @@ export class MenuListItemComponent implements OnInit {
   ngOnInit() {
   }
 
-  onItemSelected(item: any) {
+  onItemSelected(menu: any) {
   }
 }

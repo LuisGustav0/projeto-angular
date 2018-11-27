@@ -1,9 +1,8 @@
 <a
-  mat-list-menu
+  mat-list-item
   [ngStyle]="{'padding-left': (depth * 12) + 'px'}"
-  (click)="onmenuSelected(menu)"
   [ngClass]="{'active': menu.route ? router.isActive(menu.route, true): false, 'expanded': expanded}"
-  class="in-menu-list-menu"
+  class="in-mat-list-item"
 >
 
   <mat-icon
@@ -16,12 +15,15 @@
 
   <span fxFlex *ngIf="menu.children && menu.children.length">
     <span fxFlex></span>
-    <mat-icon [@indicatorRotate]="expanded ? 'expanded': 'collapsed'">
+    <mat-icon >
       expand_more
     </mat-icon>
   </span>
 </a>
 <div *ngIf="expanded">
-  <app-menu-list-menu *ngFor="let child of menu.children" [menu]="child" [depth]="depth+1">
-  </app-menu-list-menu>
+  <in-menu-list-item
+    *ngFor="let child of menu.children"
+    [menu]="child"
+    [depth]="depth+1">
+  </in-menu-list-item>
 </div>
