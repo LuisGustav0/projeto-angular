@@ -9,6 +9,8 @@ export class AppComponent {
   listaMenu = [
     {
       title: 'Categorias',
+      icon: 'home',
+      route: '',
       children: [
         {
           title: 'Pesquisa Categorias'

@@ -14,6 +14,8 @@ import { ButtonComponent } from './components/button/button.component';
 import { HeaderComponent } from './components/index/header/header.component';
 import { MenuListItemComponent } from './components/index/menu-list-item/menu-list-item.component';
 
+import { NavService } from './components/index/base/nav.service';
+
 @NgModule({
   declarations: [
     IndexComponent,
@@ -34,6 +36,9 @@ import { MenuListItemComponent } from './components/index/menu-list-item/menu-li
     IndexComponent,
     InputTextComponent,
     ButtonComponent
+  ],
+  providers: [
+    NavService
   ]
 })
 export class InnovationUiModule { }
