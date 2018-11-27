@@ -3,11 +3,11 @@
   [ngStyle]="{'padding-left': (depth * 12) + 'px'}"
   (click)="onmenuSelected(menu)"
   [ngClass]="{'active': menu.route ? router.isActive(menu.route, true): false, 'expanded': expanded}"
-  class="menu-list-menu"
+  class="in-menu-list-menu"
 >
 
   <mat-icon
-    class="routeIcon"
+    class="in-route-icon"
   >
     {{menu.icon}}
   </mat-icon>
