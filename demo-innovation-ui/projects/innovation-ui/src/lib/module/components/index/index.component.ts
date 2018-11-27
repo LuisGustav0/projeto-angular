@@ -12,10 +12,10 @@ import {
 export class IndexComponent implements OnInit {
   @Input() title: string;
   @Input() logo: any;
+  @Input() listMenu: [];
 
-  constructor() { }
+  constructor() {}
 
   ngOnInit() {
   }
-
 }

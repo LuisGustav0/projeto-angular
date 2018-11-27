@@ -4,9 +4,19 @@
     #sidenav
     class="in-mat-sidenav"
     role="navigation">
-    <p>
-      Menu
-    </p>
+    <mat-toolbar
+      color="primary"
+    >
+      <span>
+        Menu
+      </span>
+    </mat-toolbar>
+
+    <in-menu-list-item
+      *ngFor="let menu of listMenu"
+      [menu]="menu"
+    >
+    </in-menu-list-item>
   </mat-sidenav>
 
   <mat-sidenav-content>

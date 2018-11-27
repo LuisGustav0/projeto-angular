@@ -6,5 +6,31 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'demo-innovation-ui';
+  listaMenu = [
+    {
+      title: 'Categorias',
+      children: [
+        {
+          title: 'Pesquisa Categorias'
+        },
+        {
+          title: 'Cadastro Categorias'
+        }
+      ]
+    },
+    {
+      title: 'Clientes',
+      children: [
+        {
+          title: 'Pesquisa Clientes'
+        },
+        {
+          title: 'Cadastro Clientes'
+        }
+      ]
+    },
+    {
+      title: 'Teste'
+    }
+  ];
 }
