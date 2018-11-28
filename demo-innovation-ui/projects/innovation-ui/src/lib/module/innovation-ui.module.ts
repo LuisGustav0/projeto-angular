@@ -18,6 +18,7 @@ import { HeaderComponent } from './components/index/header/header.component';
 import { MenuListItemComponent } from './components/index/menu-list-item/menu-list-item.component';
 
 import { NavService } from './components/index/base/nav.service';
+import { IndexModuleComponent } from './components/index-module/index-module.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { NavService } from './components/index/base/nav.service';
     InputTextComponent,
     ButtonComponent,
     HeaderComponent,
-    MenuListItemComponent
+    MenuListItemComponent,
+    IndexModuleComponent
   ],
   imports: [
     CommonModule,
