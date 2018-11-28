@@ -1,9 +1,47 @@
 <mat-sidenav-container
+  class="in-mat-sidenav-container"
+>
+  <mat-sidenav
+    #sidenav
+    mode="over"
+    opened="false"
+    class="in-mat-sidenav"
+  >
+    <mat-toolbar
+      color="primary"
+    >
+      <span>
+        Menu
+      </span>
+    </mat-toolbar>
+
+    <mat-nav-list
+      class="in-mat-nav-list"
+    >
+      <in-menu-list-item
+        *ngFor="let menu of listMenu"
+        [menu]="menu"
+      >
+      </in-menu-list-item>
+    </mat-nav-list>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <in-header
+      [logo]="logo"
+      title="title"
+    >
+    </in-header>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
+<!--
+<mat-sidenav-container
   class="in-mat-sidenav-container">
   <mat-sidenav
     #sidenav
     class="in-mat-sidenav"
-    role="navigation">
+    mode="over" opened="false">
     <mat-toolbar
       color="primary"
     >
@@ -20,15 +58,10 @@
   </mat-sidenav>
 
   <mat-sidenav-content>
-    <in-header
-      [sidenav]="sidenav"
-      [logo]="logo"
-      title="title"
-    >
-    </in-header>
+
 
     <content>
     </content>
   </mat-sidenav-content>
-</mat-sidenav-container>
+</mat-sidenav-container>-->
 

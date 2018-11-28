@@ -44,7 +44,7 @@ export class MenuListItemComponent implements OnInit {
   ngOnInit() {
   }
 
-  onItemSelected(menu: any) {
+  onMenuSelected(menu: any) {
     if (!menu.children || !menu.children.length) {
       this.navService.closeNav();
     }
