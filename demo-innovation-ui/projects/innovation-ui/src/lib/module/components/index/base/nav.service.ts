@@ -1,10 +1,10 @@
 import {
-    Injectable
+  Injectable
 } from '@angular/core';
 import {
-    Event,
-    NavigationEnd,
-    Router
+  Event,
+  NavigationEnd,
+  Router
 } from '@angular/router';
 import { BehaviorSubject } from 'rxjs';
 

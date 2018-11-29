@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { CategoriesRoutingModule } from './categories-routing.module';
@@ -6,10 +6,14 @@ import { CadastroCategoriesComponent } from './cadastro-categories/cadastro-cate
 import { PesquisaCategoriesComponent } from './pesquisa-categories/pesquisa-categories.component';
 
 @NgModule({
-  declarations: [CadastroCategoriesComponent, PesquisaCategoriesComponent],
+  declarations: [
+    CadastroCategoriesComponent,
+    PesquisaCategoriesComponent
+  ],
   imports: [
     CommonModule,
     CategoriesRoutingModule
-  ]
+  ],
+  schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
 })
 export class CategoriesModule { }

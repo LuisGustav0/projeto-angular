@@ -14,17 +14,11 @@ export class AppComponent {
       children: [
         {
           title: 'Pesquisa Categorias',
-          children: [
-            {
-              title: 'Pesquisa Categorias'
-            },
-            {
-              title: 'Cadastro Categorias'
-            }
-          ]
+          route: 'pesquisa-categories'
         },
         {
-          title: 'Cadastro Categorias'
+          title: 'Cadastro Categorias',
+          route: 'cadastro-categories'
         }
       ]
     },

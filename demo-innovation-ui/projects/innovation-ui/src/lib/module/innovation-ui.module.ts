@@ -1,8 +1,6 @@
 import { NgModule } from '@angular/core';
-
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
-
 import { FlexLayoutModule } from '@angular/flex-layout';
 
 import {
@@ -15,22 +13,24 @@ import {
 } from '@angular/material';
 
 import { IndexComponent } from './components/index/index.component';
-import { InputTextComponent } from './components/input-text/input-text.component';
-import { ButtonComponent } from './components/button/button.component';
+import { IndexModuleComponent } from './components/index-module/index-module.component';
 import { HeaderComponent } from './components/index/header/header.component';
 import { MenuListItemComponent } from './components/index/menu-list-item/menu-list-item.component';
+import { InputTextComponent } from './components/input-text/input-text.component';
+import { ButtonComponent } from './components/button/button.component';
+import { CrudComponent } from './components/crud/crud.component';
 
 import { NavService } from './components/index/base/nav.service';
-import { IndexModuleComponent } from './components/index-module/index-module.component';
 
 @NgModule({
   declarations: [
     IndexComponent,
-    InputTextComponent,
-    ButtonComponent,
+    IndexModuleComponent,
     HeaderComponent,
     MenuListItemComponent,
-    IndexModuleComponent
+    InputTextComponent,
+    ButtonComponent,
+    CrudComponent
   ],
   imports: [
     CommonModule,
@@ -45,8 +45,12 @@ import { IndexModuleComponent } from './components/index-module/index-module.com
   ],
   exports: [
     IndexComponent,
+    IndexModuleComponent,
+    HeaderComponent,
+    MenuListItemComponent,
     InputTextComponent,
-    ButtonComponent
+    ButtonComponent,
+    CrudComponent
   ],
   providers: [
     NavService

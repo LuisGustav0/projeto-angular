@@ -20,8 +20,8 @@ import {
   styleUrls: ['./menu-list-item.component.scss'],
   animations: [
     trigger('indicatorRotate', [
-      state('collapsed', style({transform: 'rotate(0deg)'})),
-      state('expanded', style({transform: 'rotate(180deg)'})),
+      state('collapsed', style({ transform: 'rotate(0deg)' })),
+      state('expanded', style({ transform: 'rotate(180deg)' })),
       transition('expanded <=> collapsed',
         animate('225ms cubic-bezier(0.4,0.0,0.2,1)')
       ),
@@ -35,17 +35,24 @@ export class MenuListItemComponent implements OnInit {
   @Input() depth: number;
 
   constructor(public navService: NavService,
-              public router: Router) {
+    public router: Router) {
     if (this.depth === undefined) {
       this.depth = 0;
     }
   }
 
   ngOnInit() {
+    this.navService.currentUrl.subscribe((url: string) => {
+      if (this.menu.route && url) {
+        this.expanded = url.indexOf(`/${this.menu.route}`) === 0;
+        this.ariaExpanded = this.expanded;
+      }
+    });
   }
 
   onMenuSelected(menu: any) {
     if (!menu.children || !menu.children.length) {
+      this.router.navigate([menu.route]);
       this.navService.closeNav();
     }
 

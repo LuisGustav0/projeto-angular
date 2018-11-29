@@ -2,7 +2,6 @@
 
 @include breakpoint-max(600px) {
   .in-fixed-topnav {
-    position: fixed;
     top: 0;
     left: 0;
     z-index: 2;
