@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
+
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 
 import { FlexLayoutModule } from '@angular/flex-layout';
 
@@ -8,7 +10,8 @@ import {
   MatSidenavModule,
   MatButtonModule,
   MatIconModule,
-  MatListModule
+  MatListModule,
+  MatCardModule
 } from '@angular/material';
 
 import { IndexComponent } from './components/index/index.component';
@@ -31,12 +34,14 @@ import { IndexModuleComponent } from './components/index-module/index-module.com
   ],
   imports: [
     CommonModule,
+    RouterModule,
     FlexLayoutModule,
     MatToolbarModule,
     MatSidenavModule,
     MatButtonModule,
     MatIconModule,
-    MatListModule
+    MatListModule,
+    MatCardModule
   ],
   exports: [
     IndexComponent,
