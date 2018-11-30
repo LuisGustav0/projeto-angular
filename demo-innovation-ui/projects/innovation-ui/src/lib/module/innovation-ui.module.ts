@@ -1,8 +1,12 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
-import { FlexLayoutModule } from '@angular/flex-layout';
+import {
+  FormsModule,
+  ReactiveFormsModule
+} from '@angular/forms';
 
+import { FlexLayoutModule } from '@angular/flex-layout';
 import {
   MatToolbarModule,
   MatSidenavModule,
@@ -35,6 +39,8 @@ import { NavService } from './components/index/base/nav.service';
   imports: [
     CommonModule,
     RouterModule,
+    FormsModule,
+    ReactiveFormsModule,
     FlexLayoutModule,
     MatToolbarModule,
     MatSidenavModule,
