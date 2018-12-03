@@ -21,7 +21,6 @@ import { IndexModuleComponent } from './components/index-module/index-module.com
 import { HeaderComponent } from './components/index/header/header.component';
 import { MenuListItemComponent } from './components/index/menu-list-item/menu-list-item.component';
 import { InputTextComponent } from './components/input-text/input-text.component';
-import { ButtonComponent } from './components/button/button.component';
 import { CrudComponent } from './components/crud/crud.component';
 
 import { NavService } from './components/index/base/nav.service';
@@ -33,7 +32,6 @@ import { NavService } from './components/index/base/nav.service';
     HeaderComponent,
     MenuListItemComponent,
     InputTextComponent,
-    ButtonComponent,
     CrudComponent
   ],
   imports: [
@@ -55,7 +53,6 @@ import { NavService } from './components/index/base/nav.service';
     HeaderComponent,
     MenuListItemComponent,
     InputTextComponent,
-    ButtonComponent,
     CrudComponent
   ],
   providers: [
