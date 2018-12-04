@@ -16,6 +16,10 @@ import {
   MatCardModule
 } from '@angular/material';
 
+import {
+  TableModule
+} from 'primeng/table';
+
 import { IndexComponent } from './components/index/index.component';
 import { IndexModuleComponent } from './components/index-module/index-module.component';
 import { HeaderComponent } from './components/index/header/header.component';
@@ -24,6 +28,7 @@ import { InputTextComponent } from './components/input-text/input-text.component
 import { CrudComponent } from './components/crud/crud.component';
 
 import { NavService } from './components/index/base/nav.service';
+import { SearchComponent } from './components/search/search.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +37,8 @@ import { NavService } from './components/index/base/nav.service';
     HeaderComponent,
     MenuListItemComponent,
     InputTextComponent,
-    CrudComponent
+    CrudComponent,
+    SearchComponent
   ],
   imports: [
     CommonModule,
@@ -45,7 +51,8 @@ import { NavService } from './components/index/base/nav.service';
     MatButtonModule,
     MatIconModule,
     MatListModule,
-    MatCardModule
+    MatCardModule,
+    TableModule
   ],
   exports: [
     IndexComponent,
@@ -53,7 +60,8 @@ import { NavService } from './components/index/base/nav.service';
     HeaderComponent,
     MenuListItemComponent,
     InputTextComponent,
-    CrudComponent
+    CrudComponent,
+    SearchComponent
   ],
   providers: [
     NavService
