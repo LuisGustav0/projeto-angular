@@ -1,14 +1,23 @@
 <form
-  novalidate
-  #form="ngForm"
+    novalidate
+    #form="ngForm"
 >
-  <div>
-    <div class="col-lg-12">
-      <i class="fa fa-wpforms"></i>
-      {{ title }}
+    <div class="row">
+        <div class="col-lg-12">
+            <h4>
+                <i 
+                  class="fa fa-wpforms"
+                  style="margin-right: 5px;"
+                >
+                </i>
+                <span>
+                  {{ title }}
+                </span>
+            </h4>
+        </div>
     </div>
-  </div>
 
-  <ng-content select="[body]">
-  </ng-content>
+    <div class="in-crud-body">
+        <ng-content select="[body]"></ng-content>
+    </div>
 </form>
