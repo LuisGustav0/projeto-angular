@@ -1,0 +1,17 @@
+<p-table [value]="provider">
+  <ng-template pTemplate="header">
+      <tr>
+          <th>Id</th>
+          <th>Description</th>
+      </tr>
+  </ng-template>
+  <ng-template
+      pTemplate="body"
+      let-entity
+  >
+      <tr>
+          <td>{{entity.id}}</td>
+          <td>{{entity.description}}</td>
+      </tr>
+  </ng-template>
+</p-table>

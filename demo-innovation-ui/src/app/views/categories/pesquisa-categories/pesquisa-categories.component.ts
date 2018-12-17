@@ -7,6 +7,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PesquisaCategoriesComponent implements OnInit {
 
+  listaCategories = [
+    {
+      id: 1,
+      description: 'Teste descrição 1 '
+    },
+    {
+      id: 1,
+      description: 'Descrição 2'
+    }
+  ];
+
   constructor() { }
 
   ngOnInit() {

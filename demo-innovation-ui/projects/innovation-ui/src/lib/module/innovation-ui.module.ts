@@ -20,15 +20,16 @@ import {
   TableModule
 } from 'primeng/table';
 
+import { NavService } from './components/index/base/nav.service';
+
 import { IndexComponent } from './components/index/index.component';
 import { IndexModuleComponent } from './components/index-module/index-module.component';
 import { HeaderComponent } from './components/index/header/header.component';
 import { MenuListItemComponent } from './components/index/menu-list-item/menu-list-item.component';
 import { InputTextComponent } from './components/input-text/input-text.component';
 import { CrudComponent } from './components/crud/crud.component';
-
-import { NavService } from './components/index/base/nav.service';
 import { SearchComponent } from './components/search/search.component';
+import { DataTableComponent } from './components/data-table/data-table.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { SearchComponent } from './components/search/search.component';
     MenuListItemComponent,
     InputTextComponent,
     CrudComponent,
-    SearchComponent
+    SearchComponent,
+    DataTableComponent
   ],
   imports: [
     CommonModule,
@@ -61,7 +63,8 @@ import { SearchComponent } from './components/search/search.component';
     MenuListItemComponent,
     InputTextComponent,
     CrudComponent,
-    SearchComponent
+    SearchComponent,
+    DataTableComponent
   ],
   providers: [
     NavService
