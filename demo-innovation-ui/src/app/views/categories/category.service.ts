@@ -1,11 +1,14 @@
+
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Category } from './category.model';
+
+import { InService } from 'projects/innovation-ui/src/lib/module/service/in.service';
 
 @Injectable()
-export class CategoryService {
+export class CategoryService extends InService<Category> {
 
-    private apiPath: 'api/categories';
-
-    constructor(private http: HttpClient) {
-    }
+  constructor(protected http: HttpClient) {
+    super('api/categories', http);
+  }
 }
