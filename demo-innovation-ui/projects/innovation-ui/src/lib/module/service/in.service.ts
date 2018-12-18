@@ -21,14 +21,14 @@ export abstract class InService<T extends InEntity> {
     this.http = injector.get(HttpClient);
   }
 
-  getAll(): Observable<T[]> {
+  findAll(): Observable<T[]> {
     return this.http.get(this.apiPath).pipe(
       map(this.jsonDataToResources.bind(this)),
       catchError(this.handleError)
     );
   }
 
-  getById(id: number): Observable<T> {
+  findById(id: number): Observable<T> {
     const url = `${this.apiPath}/${id}`;
 
     return this.http.get(url).pipe(
