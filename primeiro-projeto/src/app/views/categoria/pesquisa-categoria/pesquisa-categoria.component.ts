@@ -4,6 +4,7 @@ import {
 } from '@angular/core';
 
 import { Categoria } from '../shared/categoria.model';
+import { CategoriaService } from './../shared/categoria.service';
 
 @Component({
   selector: 'app-pesquisa-categoria',
@@ -14,16 +15,33 @@ export class PesquisaCategoriaComponent implements OnInit {
   listaCategoria: Categoria[];
   cols: any[];
 
-  constructor() { }
+  constructor(private categoriaService: CategoriaService) { }
 
   ngOnInit() {
-    this.listaCategoria = [
-      { id: 1, descricao: 'Teste' }
-    ];
+    this.categoriaService.findAll()
+      .subscribe(
+        listaCategoria => this.listaCategoria = listaCategoria,
+        error => alert('Erro ao carregar lista de categoria!')
+      );
 
     this.cols = [
       { header: 'Código', field: 'id' },
       { header: 'Descrição', field: 'descricao' }
     ];
+  }
+
+  delete(categoria) {
+    const isDelete = confirm('Deseja realmente excluir categoria ' + categoria.id +
+      ' - ' + categoria.descricao);
+
+    if (!isDelete) {
+      return;
+    }
+
+    this.categoriaService.delete(categoria.id)
+      .subscribe(
+        () => this.listaCategoria = this.listaCategoria.filter(element => element !== categoria),
+        () => alert('Erro ao tentar excluir')
+      );
   }
 }
