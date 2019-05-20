@@ -8,6 +8,7 @@ import {
 } from '@angular/material';
 
 import { TableModule } from 'primeng/table';
+import { ButtonModule } from 'primeng/button';
 
 import { CardComponent } from './card/card.component';
 import { CadastroComponent } from './cadastro/cadastro.component';
@@ -20,7 +21,8 @@ import { TableComponent } from './table/table.component';
     FormsModule,
     MatCardModule,
     MatButtonModule,
-    TableModule
+    TableModule,
+    ButtonModule
   ],
   declarations: [
     CardComponent,

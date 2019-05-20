@@ -3,7 +3,7 @@ import {
   OnInit
 } from '@angular/core';
 
-import { Categoria } from './../categoria';
+import { Categoria } from '../shared/categoria.model';
 
 @Component({
   selector: 'app-pesquisa-categoria',

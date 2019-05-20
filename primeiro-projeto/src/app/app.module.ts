@@ -16,6 +16,9 @@ import {
 
 import { AppComponent } from './app.component';
 
+import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { InMemoryDatabase } from './in-memory-database';
+
 @NgModule({
   declarations: [
     AppComponent
@@ -23,6 +26,7 @@ import { AppComponent } from './app.component';
   imports: [
     BrowserAnimationsModule,
     AppRoutingModule,
+    HttpClientInMemoryWebApiModule.forRoot(InMemoryDatabase),
     MatSidenavModule,
     MatToolbarModule,
     MatButtonModule,
