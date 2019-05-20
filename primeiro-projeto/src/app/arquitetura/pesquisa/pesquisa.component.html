@@ -1,0 +1,13 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>
+      {{ titulo }}
+    </mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <app-table
+      [cols]="cols"
+      [value]="list">
+    </app-table>
+  </mat-card-content>
+</mat-card>

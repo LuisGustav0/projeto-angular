@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
-import { 
-  Routes, 
-  RouterModule 
+import {
+  Routes,
+  RouterModule
 } from '@angular/router';
 
 import { PesquisaCategoriaComponent } from './pesquisa-categoria/pesquisa-categoria.component';
@@ -9,7 +9,7 @@ import { CadastroCategoriaComponent } from './cadastro-categoria/cadastro-catego
 
 const routes: Routes = [
   {
-    path: '',
+    path: 'pesquisa-categoria',
     component: PesquisaCategoriaComponent
   },
   {

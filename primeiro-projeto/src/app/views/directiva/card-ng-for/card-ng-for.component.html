@@ -5,16 +5,16 @@
     </mat-card-title>
   </mat-card-header>
   <mat-card-content>
-    <div 
+    <div
         *ngIf="isSalvo"
-        class="alert alert-success" 
+        class="alert alert-success"
         role="alert">
       Colaborador <strong>{{ nome }}</strong> adicionado com sucesso!
     </div>
 
     <div class="form-group">
       <label for="inputNome">Nome</label>
-      <input 
+      <input
           type="text"
           id="inputNome"
           class="form-control form-control-sm"
@@ -22,24 +22,24 @@
           (focus)="isSalvo = false">
     </div>
 
-    <button 
-        mat-raised-button 
+    <button
+        mat-raised-button
         color="primary"
         (click)="onSalvar()"
         [disabled]="nome.length == 0">
       Salvar
     </button>
 
-    <button 
+    <button
         style="margin-left: 5px"
-        mat-raised-button 
+        mat-raised-button
         color="warn"
         (click)="onLimpar()">
       Limpar
     </button>
 
     <div class="row" style="margin-top: 20px">
-      <div 
+      <div
           class="col-2"
           *ngFor="let colaborador of listaColaborador">
         <app-card

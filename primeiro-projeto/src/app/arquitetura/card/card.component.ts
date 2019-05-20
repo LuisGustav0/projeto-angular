@@ -1,7 +1,7 @@
-import { 
-  Component, 
-  OnInit, 
-  Input 
+import {
+  Component,
+  OnInit,
+  Input
 } from '@angular/core';
 
 @Component({

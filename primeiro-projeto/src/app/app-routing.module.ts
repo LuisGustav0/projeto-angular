@@ -3,8 +3,12 @@ import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
   {
-    path: 'categoria',
+    path: '',
     loadChildren: './views/categoria/categoria.module#CategoriaModule'
+  },
+  {
+    path: '',
+    loadChildren: './views/pessoa/pessoa.module#PessoaModule'
   },
   {
     path: 'data-binding',
