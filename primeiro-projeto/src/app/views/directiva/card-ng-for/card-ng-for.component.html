@@ -1,0 +1,51 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>
+      *NgFor - Card componente
+    </mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <div 
+        *ngIf="isSalvo"
+        class="alert alert-success" 
+        role="alert">
+      Colaborador <strong>{{ nome }}</strong> adicionado com sucesso!
+    </div>
+
+    <div class="form-group">
+      <label for="inputNome">Nome</label>
+      <input 
+          type="text"
+          id="inputNome"
+          class="form-control form-control-sm"
+          [(ngModel)]="nome"
+          (focus)="isSalvo = false">
+    </div>
+
+    <button 
+        mat-raised-button 
+        color="primary"
+        (click)="onSalvar()"
+        [disabled]="nome.length == 0">
+      Salvar
+    </button>
+
+    <button 
+        style="margin-left: 5px"
+        mat-raised-button 
+        color="warn"
+        (click)="onLimpar()">
+      Limpar
+    </button>
+
+    <div class="row" style="margin-top: 20px">
+      <div 
+          class="col-2"
+          *ngFor="let colaborador of listaColaborador">
+        <app-card
+          [colaborador]="colaborador">
+        </app-card>
+      </div>
+    </div>
+  </mat-card-content>
+</mat-card>

@@ -1,0 +1,30 @@
+<mat-card>
+    <mat-card-header>
+      <mat-card-title>
+        Variavel Referência!
+      </mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <div 
+          class="alert alert-success" 
+          role="alert">
+        Colaborador <strong>{{ nome }}</strong> adicionado com sucesso!
+      </div>
+  
+      <div class="form-group">
+        <label for="inputNome">Nome</label>
+        <input 
+            type="text"
+            id="inputNome"
+            class="form-control form-control-sm"
+            #inputNome>
+      </div>
+  
+      <button 
+          mat-raised-button 
+          color="primary"
+          (click)="onSalvar(inputNome.value)">
+        Salvar
+      </button>
+    </mat-card-content>
+  </mat-card>

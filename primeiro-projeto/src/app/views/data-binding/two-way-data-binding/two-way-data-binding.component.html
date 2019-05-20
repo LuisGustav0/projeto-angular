@@ -1,0 +1,31 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>
+      Two way data binding!
+    </mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <div 
+        class="alert alert-success" 
+        role="alert">
+      Colaborador <strong>{{ nome }}</strong> adicionado com sucesso!
+    </div>
+
+    <div class="form-group">
+      <label for="inputNome">Nome</label>
+      <input 
+          type="text"
+          id="inputNome"
+          class="form-control form-control-sm"
+          [(ngModel)]="nome">
+    </div>
+
+    <button 
+        mat-raised-button 
+        color="primary"
+        (click)="onSalvar()"
+        [disabled]="nome.length == 0">
+      Salvar
+    </button>
+  </mat-card-content>
+</mat-card>
