@@ -43,7 +43,9 @@
           class="col-2"
           *ngFor="let colaborador of listaColaborador">
         <app-card
-          [colaborador]="colaborador">
+          [propriedadeImage]="caminhoImg"
+          [propriedadeValor]="nome"
+          [card]="colaborador">
         </app-card>
       </div>
     </div>
