@@ -15,6 +15,7 @@ import { CardComponent } from './card/card.component';
 import { CadastroComponent } from './cadastro/cadastro.component';
 import { PesquisaComponent } from './pesquisa/pesquisa.component';
 import { TableComponent } from './table/table.component';
+import { InputComponent } from './input/input.component';
 
 @NgModule({
   imports: [
@@ -30,12 +31,14 @@ import { TableComponent } from './table/table.component';
     CardComponent,
     CadastroComponent,
     PesquisaComponent,
-    TableComponent
+    TableComponent,
+    InputComponent
   ],
   exports: [
     CardComponent,
     CadastroComponent,
-    PesquisaComponent
+    PesquisaComponent,
+    InputComponent
   ]
 })
 export class ArquiteturaModule { }
