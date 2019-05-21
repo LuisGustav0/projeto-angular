@@ -30,7 +30,7 @@ export class PesquisaCategoriaComponent implements OnInit {
     ];
   }
 
-  delete(categoria) {
+  delete(categoria: Categoria) {
     const isDelete = confirm('Deseja realmente excluir categoria ' + categoria.id +
       ' - ' + categoria.descricao);
 

@@ -2,9 +2,69 @@
   <mat-card-header>
     <mat-card-title>
       {{ titulo }}
+      <mat-divider></mat-divider>
     </mat-card-title>
   </mat-card-header>
   <mat-card-content>
+    <form #crudForm="ngForm">
+      <div class="row">
+        {{ categoria | json }}
+      </div>
 
+      <div class="form-row">
+        <div class="form-group col-md-3">
+          <label for="idCodigo">
+            <strong>Código</strong>
+          </label>
+          <input
+            type="text"
+            class="form-control form-control-sm"
+            id="idCodigo"
+            name="codigo"
+            [(ngModel)]="categoria.id"
+            disabled>
+        </div>
+
+        <div class="form-group col-md-6">
+          <label for="idDescricao">
+              <strong>Descrição</strong>
+          </label>
+          <input
+            type="password"
+            class="form-control form-control-sm"
+            id="idDescricao"
+            name="descricao"
+            [(ngModel)]="categoria.descricao"
+            required>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
+          <button
+              mat-raised-button
+              color="primary"
+              (click)="onSalvar()">
+            Salvar
+          </button>
+
+          <button
+              mat-raised-button
+              color="accent"
+              style="margin-left: 5px;"
+              type="reset">
+            Limpar
+          </button>
+
+          <button
+              mat-raised-button
+              color="warn"
+              style="margin-left: 5px;"
+              (click)="onExcluir()">
+            Excluir
+          </button>
+        </div>
+      </div>
+    </form>
   </mat-card-content>
 </mat-card>

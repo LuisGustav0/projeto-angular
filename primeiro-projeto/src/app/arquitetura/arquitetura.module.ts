@@ -4,7 +4,8 @@ import { FormsModule } from '@angular/forms';
 
 import {
   MatCardModule,
-  MatButtonModule
+  MatButtonModule,
+  MatDividerModule
 } from '@angular/material';
 
 import { TableModule } from 'primeng/table';
@@ -22,7 +23,8 @@ import { TableComponent } from './table/table.component';
     MatCardModule,
     MatButtonModule,
     TableModule,
-    ButtonModule
+    ButtonModule,
+    MatDividerModule
   ],
   declarations: [
     CardComponent,
