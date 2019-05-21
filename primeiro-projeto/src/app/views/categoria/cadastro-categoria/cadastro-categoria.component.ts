@@ -1,9 +1,8 @@
 import { Component } from '@angular/core';
 
-import {
-  CategoriaService,
-  BaseCategoriaService
-} from './../shared/categoria.service';
+import { BaseCategoriaService } from '../shared/base-categoria-service';
+import { CategoriaService } from '../shared/categoria.service';
+
 
 @Component({
   selector: 'app-cadastro-categoria',

@@ -7,10 +7,6 @@ const routes: Routes = [
     loadChildren: './views/categoria/categoria.module#CategoriaModule'
   },
   {
-    path: '',
-    loadChildren: './views/pessoa/pessoa.module#PessoaModule'
-  },
-  {
     path: 'data-binding',
     loadChildren: './views/data-binding/data-binding.module#DataBindingModule'
   },

@@ -10,7 +10,7 @@ export class InterpolacaoComponent implements OnInit {
   curso = 'Angular 2+ de ';
   horas = '22 horas';
 
-  constructor() { 
+  constructor() {
   }
 
   ngOnInit() {

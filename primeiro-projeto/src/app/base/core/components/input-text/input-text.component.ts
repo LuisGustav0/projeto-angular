@@ -10,11 +10,11 @@ import { NgModel } from '@angular/forms';
 let nextUniqueId = 0;
 
 @Component({
-  selector: 'app-input',
-  templateUrl: './input.component.html',
-  styleUrls: ['./input.component.scss']
+  selector: 'app-input-text',
+  templateUrl: './input-text.component.html',
+  styleUrls: ['./input-text.component.scss']
 })
-export class InputComponent implements OnInit {
+export class InputTextComponent implements OnInit {
   @Input() label: string;
   @Input() hideLabel: boolean;
   @Input() id = `input-${nextUniqueId++}`;

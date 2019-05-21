@@ -1,7 +1,7 @@
-import { BaseService } from 'src/app/core/services/base.service';
+import { BaseService } from 'src/app/base/core/services/base.service';
 import { Categoria } from './categoria.model';
 
-import { BaseHttpClient } from 'src/app/core/seguranca/base-http-client';
+import { BaseHttpClient } from 'src/app/base/core/components/seguranca/base-http-client';
 
 export class BaseCategoriaService extends BaseService<Categoria> {
   constructor(protected http: BaseHttpClient) {

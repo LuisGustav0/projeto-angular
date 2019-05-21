@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 
 import { BaseEntity } from './entity/base-entity';
-import { BaseHttpClient } from '../seguranca/base-http-client';
+import { BaseHttpClient } from '../components/seguranca/base-http-client';
 
 @Injectable({
   providedIn: 'root'

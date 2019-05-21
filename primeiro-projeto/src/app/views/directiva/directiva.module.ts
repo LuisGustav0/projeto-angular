@@ -9,7 +9,7 @@ import {
   MatButtonModule
 } from '@angular/material';
 
-import { ArquiteturaModule } from 'src/app/core/core.module';
+import { CoreModule } from 'src/app/base/core/core.module';
 
 import { NgIfComponent } from './ng-if/ng-if.component';
 import { NgForComponent } from './ng-for/ng-for.component';
@@ -22,7 +22,7 @@ import { CardNgForComponent } from './card-ng-for/card-ng-for.component';
     DirectivaRoutingModule,
     MatCardModule,
     MatButtonModule,
-    ArquiteturaModule
+    CoreModule
   ],
   declarations: [
     NgIfComponent,

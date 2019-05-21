@@ -5,9 +5,8 @@ import {
   ViewChild
 } from '@angular/core';
 
-import { Categoria } from "./../../views/categoria/shared/Categoria";
-import { CategoriaService } from '../../views/categoria/shared/categoria.service';
 import { NgForm } from '@angular/forms';
+import { Categoria } from 'src/app/views/categoria/shared/categoria.model';
 
 @Component({
   selector: 'app-cadastro',

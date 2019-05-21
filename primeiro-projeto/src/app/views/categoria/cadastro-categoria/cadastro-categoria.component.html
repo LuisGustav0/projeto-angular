@@ -8,20 +8,20 @@
 
     <div class="row">
       <div class="col-md-3">
-        <app-input
+        <app-input-text
           label="Código"
           [disabled]="true"
           [(ngModel)]="service.id">
-        </app-input>
+        </app-input-text>
       </div>
 
       <div class="col-md-6">
-        <app-input
+        <app-input-text
           label="Descrição"
           [required]="true"
           [maxlength]="60"
           [(ngModel)]="service.descricao">
-        </app-input>
+        </app-input-text>
       </div>
     </div>
   </div>
