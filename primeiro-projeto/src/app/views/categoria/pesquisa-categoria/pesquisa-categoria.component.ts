@@ -3,7 +3,6 @@ import {
   OnInit
 } from '@angular/core';
 
-import { Categoria } from '../shared/categoria.model';
 import { CategoriaService } from '../shared/categoria.service';
 
 @Component({
@@ -16,6 +15,6 @@ export class PesquisaCategoriaComponent implements OnInit {
   constructor(private categoriaService: CategoriaService) { }
 
   ngOnInit(): void {
-
+      
   }
 }

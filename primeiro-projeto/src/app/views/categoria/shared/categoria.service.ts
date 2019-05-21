@@ -1,14 +1,15 @@
-import { Injectable } from '@angular/core';
+import { Injectable, Injector } from '@angular/core';
 
-import { BaseHttpClient } from 'src/app/base/core/components/seguranca/base-http-client';
-import { BaseCategoriaService } from './base-categoria-service';
+import { BaseService } from './../../../base/core/services/base.service';
 
-@Injectable()
-export class CategoriaService {
-  constructor(protected http: BaseHttpClient) { }
+import { Categoria } from './categoria.model';
 
-  getBaseService(): BaseCategoriaService {
-    return new BaseCategoriaService(this.http);
+@Injectable({
+  providedIn: 'root'
+})
+export class CategoriaService extends BaseService<Categoria> {
+
+  constructor(protected injector: Injector) {
+    super('categoria', injector);
   }
 }
-

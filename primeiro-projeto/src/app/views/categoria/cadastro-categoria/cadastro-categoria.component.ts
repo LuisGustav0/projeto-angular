@@ -1,8 +1,6 @@
 import { Component } from '@angular/core';
 
-import { BaseCategoriaService } from '../shared/base-categoria-service';
 import { CategoriaService } from '../shared/categoria.service';
-
 
 @Component({
   selector: 'app-cadastro-categoria',
@@ -10,13 +8,7 @@ import { CategoriaService } from '../shared/categoria.service';
   styleUrls: ['./cadastro-categoria.component.scss']
 })
 export class CadastroCategoriaComponent {
-  service: BaseCategoriaService;
+  constructor(private service: CategoriaService) {
 
-  constructor(private categoriaService: CategoriaService) {
-    this.configBaseService();
-  }
-
-  configBaseService(): void {
-    this.service = this.categoriaService.getBaseService();
   }
 }

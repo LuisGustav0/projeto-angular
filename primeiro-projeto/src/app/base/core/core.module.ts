@@ -5,7 +5,7 @@ import { FormsModule } from '@angular/forms';
 
 import { HttpClientModule } from '@angular/common/http';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
-import { InMemoryDatabase } from './in-memory-database';
+import { InMemoryDatabase } from './database/in-memory-database';
 
 import {
   MatCardModule,
@@ -45,9 +45,10 @@ import { InputTextComponent } from './components/input-text/input-text.component
     InputTextComponent
   ],
   exports: [
-    // Modules
+    CommonModule,
     BrowserAnimationsModule,
     HttpClientModule,
+    FormsModule,
 
     // Components
     CardComponent,
