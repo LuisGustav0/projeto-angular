@@ -1,3 +1,28 @@
 <app-cadastro
-	titulo="Cadastro de categoria">
+    [service]="service"
+    titulo="Cadastro de categoria">
+  <div class="body">
+    <div class="row">
+        {{ categoria | json }}
+    </div>
+
+    <div class="row">
+      <div class="col-md-3">
+        <app-input
+          label="Código"
+          [disabled]="true"
+          [(ngModel)]="service.id">
+        </app-input>
+      </div>
+
+      <div class="col-md-6">
+        <app-input
+          label="Descrição"
+          [required]="true"
+          [maxlength]="60"
+          [(ngModel)]="service.descricao">
+        </app-input>
+      </div>
+    </div>
+  </div>
 </app-cadastro>

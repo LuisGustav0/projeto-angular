@@ -9,7 +9,7 @@ import {
   MatButtonModule
 } from '@angular/material';
 
-import { ArquiteturaModule } from 'src/app/arquitetura/arquitetura.module';
+import { ArquiteturaModule } from 'src/app/core/core.module';
 
 import { NgIfComponent } from './ng-if/ng-if.component';
 import { NgForComponent } from './ng-for/ng-for.component';

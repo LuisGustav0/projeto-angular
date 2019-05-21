@@ -1,4 +1,4 @@
-import { Categoria } from '../categoria/shared/categoria.model';
+import { Categoria } from "../categoria/shared/Categoria";
 
 export class Financeiro {
   constructor(public id?: number,

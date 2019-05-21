@@ -3,7 +3,7 @@ import {
   OnInit
 } from '@angular/core';
 
-import { Categoria } from '../shared/categoria.model';
+import { Categoria } from "../shared/Categoria";
 import { CategoriaService } from './../shared/categoria.service';
 
 @Component({

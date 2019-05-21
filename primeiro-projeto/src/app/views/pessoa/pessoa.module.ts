@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { PessoaRoutingModule } from './pessoa-routing.module';
 import { PesquisaPessoaComponent } from './pesquisa-pessoa/pesquisa-pessoa.component';
-import { ArquiteturaModule } from 'src/app/arquitetura/arquitetura.module';
+import { ArquiteturaModule } from 'src/app/core/core.module';
 
 @NgModule({
   imports: [

@@ -1,18 +1,23 @@
+import { Component } from '@angular/core';
+
 import {
-  Component,
-  OnInit
-} from '@angular/core';
+  CategoriaService,
+  BaseCategoriaService
+} from './../shared/categoria.service';
 
 @Component({
   selector: 'app-cadastro-categoria',
   templateUrl: './cadastro-categoria.component.html',
   styleUrls: ['./cadastro-categoria.component.scss']
 })
-export class CadastroCategoriaComponent implements OnInit {
+export class CadastroCategoriaComponent {
+  service: BaseCategoriaService;
 
-  constructor() { }
-
-  ngOnInit() {
+  constructor(private categoriaService: CategoriaService) {
+    this.configBaseService();
   }
 
+  configBaseService(): void {
+    this.service = this.categoriaService.getBaseService();
+  }
 }

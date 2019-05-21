@@ -16,7 +16,9 @@ let nextUniqueId = 0;
 })
 export class InputComponent implements OnInit {
   @Input() label: string;
+  @Input() hideLabel: boolean;
   @Input() id = `input-${nextUniqueId++}`;
+  @Input() disabled = false;
   @Input() required = false;
   @Input() requiredConditional = false;
   @Input() placeholder = '';
@@ -31,5 +33,6 @@ export class InputComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    console.log(this.required);
   }
 }
