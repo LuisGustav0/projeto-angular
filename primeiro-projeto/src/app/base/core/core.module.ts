@@ -8,19 +8,24 @@ import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDatabase } from './database/in-memory-database';
 
 import {
+  MatSidenavModule,
+  MatToolbarModule,
   MatCardModule,
   MatButtonModule,
+  MatIconModule,
   MatDividerModule
 } from '@angular/material';
 
 import { TableModule } from 'primeng/table';
 import { ButtonModule } from 'primeng/button';
 
+import { IndexComponent } from './components/index/index.component';
 import { CardComponent } from './components/card/card.component';
 import { CadastroComponent } from './components/cadastro/cadastro.component';
 import { PesquisaComponent } from './components/pesquisa/pesquisa.component';
 import { TableComponent } from './components/table/table.component';
 import { InputTextComponent } from './components/input-text/input-text.component';
+
 
 @NgModule({
   imports: [
@@ -31,8 +36,11 @@ import { InputTextComponent } from './components/input-text/input-text.component
     FormsModule,
 
     // Angular Material
+    MatSidenavModule,
+    MatToolbarModule,
     MatCardModule,
     MatButtonModule,
+    MatIconModule,
     TableModule,
     ButtonModule,
     MatDividerModule
@@ -42,7 +50,8 @@ import { InputTextComponent } from './components/input-text/input-text.component
     CadastroComponent,
     PesquisaComponent,
     TableComponent,
-    InputTextComponent
+    InputTextComponent,
+    IndexComponent
   ],
   exports: [
     CommonModule,
@@ -51,6 +60,7 @@ import { InputTextComponent } from './components/input-text/input-text.component
     FormsModule,
 
     // Components
+    IndexComponent,
     CardComponent,
     CadastroComponent,
     PesquisaComponent,

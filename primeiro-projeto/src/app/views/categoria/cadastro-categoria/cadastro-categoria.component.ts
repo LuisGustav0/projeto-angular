@@ -8,7 +8,7 @@ import { CategoriaService } from '../shared/categoria.service';
   styleUrls: ['./cadastro-categoria.component.scss']
 })
 export class CadastroCategoriaComponent {
-  constructor(private service: CategoriaService) {
+  constructor(public service: CategoriaService) {
 
   }
 }

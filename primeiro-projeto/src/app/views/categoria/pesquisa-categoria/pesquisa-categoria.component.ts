@@ -4,6 +4,7 @@ import {
 } from '@angular/core';
 
 import { CategoriaService } from '../shared/categoria.service';
+import { Categoria } from '../shared/categoria.model';
 
 @Component({
   selector: 'app-pesquisa-categoria',
@@ -12,9 +13,14 @@ import { CategoriaService } from '../shared/categoria.service';
 })
 export class PesquisaCategoriaComponent implements OnInit {
 
-  constructor(private categoriaService: CategoriaService) { }
+  listaCategoria: Categoria[];
+
+  constructor(public categoriaService: CategoriaService) { }
 
   ngOnInit(): void {
-      
+    this.categoriaService.findAll().subscribe(
+      listaCategoria => this.listaCategoria = listaCategoria,
+      error => alert('Erro ao carregar a lista')
+    );
   }
 }

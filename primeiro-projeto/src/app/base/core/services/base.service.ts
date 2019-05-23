@@ -69,13 +69,13 @@ export abstract class BaseService<T extends BaseEntity>  {
   protected jsonDataToResources(jsonData: any[]): T[] {
     const resources: T[] = [];
     jsonData.forEach(
-      element => resources.push(this.jsonDataToResourceFn(element))
+      element => resources.push(element as T)
     );
     return resources;
   }
 
   protected jsonDataToResource(jsonData: any): T {
-    return this.jsonDataToResourceFn(jsonData);
+    return jsonData as T;
   }
 
   protected handleError(error: any): Observable<any> {
