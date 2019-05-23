@@ -1,8 +1,10 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { FormsModule } from '@angular/forms';
+import {
+  NgModule,
+  CUSTOM_ELEMENTS_SCHEMA
+} from '@angular/core';
 
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDatabase } from './database/in-memory-database';
@@ -25,15 +27,15 @@ import { CadastroComponent } from './components/cadastro/cadastro.component';
 import { PesquisaComponent } from './components/pesquisa/pesquisa.component';
 import { TableComponent } from './components/table/table.component';
 import { InputTextComponent } from './components/input-text/input-text.component';
-
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   imports: [
     CommonModule,
-    BrowserAnimationsModule,
+    FormsModule,
+    RouterModule,
     HttpClientModule,
     HttpClientInMemoryWebApiModule.forRoot(InMemoryDatabase),
-    FormsModule,
 
     // Angular Material
     MatSidenavModule,
@@ -55,9 +57,19 @@ import { InputTextComponent } from './components/input-text/input-text.component
   ],
   exports: [
     CommonModule,
-    BrowserAnimationsModule,
-    HttpClientModule,
     FormsModule,
+    RouterModule,
+    HttpClientModule,
+
+    // Angular Material
+    MatSidenavModule,
+    MatToolbarModule,
+    MatCardModule,
+    MatButtonModule,
+    MatIconModule,
+    TableModule,
+    ButtonModule,
+    MatDividerModule,
 
     // Components
     IndexComponent,
@@ -65,6 +77,7 @@ import { InputTextComponent } from './components/input-text/input-text.component
     CadastroComponent,
     PesquisaComponent,
     InputTextComponent
-  ]
+  ],
+  schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
 })
 export class CoreModule { }
