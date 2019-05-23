@@ -1,17 +1,19 @@
 <div class="form-group">
-  <label [attr.for]="id"
+    <label
+        [attr.for]="id"
         class="control-label"
         *ngIf="hideLabel !== false && label">
-      <strong>
-        {{ label }}
-      </strong>
-      <i
-        *ngIf="required"
-        class="input-label-required fa fa-asterisk">
-      </i>
-      <span *ngIf="requiredConditional">
-          (<i class="input-label-required fa fa-asterisk"></i>)
-      </span>
+    <strong>
+      {{ label }}
+    </strong>
+    <i
+      *ngIf="required"
+      class="input-label-required fa fa-asterisk">
+    </i>
+    <span
+        *ngIf="requiredConditional">
+      (<i class="input-label-required fa fa-asterisk"></i>)
+    </span>
   </label>
 
   <input

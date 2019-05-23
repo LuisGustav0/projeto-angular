@@ -1,6 +1,7 @@
 <app-cadastro
+    [service]="service"
     titulo="Cadastro de categoria">
-  <div class="body">
+  <div body>
     <div class="row">
         {{ categoria | json }}
     </div>
@@ -18,7 +19,7 @@
         <app-input-text
           label="Descrição"
           [required]="true"
-          [maxlength]="60"
+          [maxlength]="40"
           [(ngModel)]="descricao">
         </app-input-text>
       </div>

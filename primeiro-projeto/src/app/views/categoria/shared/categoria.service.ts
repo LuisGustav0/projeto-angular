@@ -10,6 +10,6 @@ import { Categoria } from './categoria.model';
 export class CategoriaService extends BaseService<Categoria> {
 
   constructor(protected injector: Injector) {
-    super('categoria', injector);
+    super('api/categoria', injector);
   }
 }

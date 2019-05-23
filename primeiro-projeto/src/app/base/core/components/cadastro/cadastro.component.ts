@@ -6,7 +6,6 @@ import {
 } from '@angular/core';
 
 import { NgForm } from '@angular/forms';
-import { Categoria } from 'src/app/views/categoria/shared/categoria.model';
 
 @Component({
   selector: 'app-cadastro',
@@ -15,10 +14,10 @@ import { Categoria } from 'src/app/views/categoria/shared/categoria.model';
 })
 export class CadastroComponent implements OnInit {
   @Input() titulo: string;
+  @Input() service: any;
 
   @ViewChild('crudForm') crudForm: NgForm;
 
-  categoria: Categoria = new Categoria();
   isSalvando: boolean;
 
   constructor() { }
